@@ -1,0 +1,32 @@
+.dashboard-shell {
+  min-height: 100vh;
+}
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 250px;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 20;
+}
+.main-area {
+  min-width: 0;
+  margin-left: 250px;
+  min-height: 100vh;
+}
+.main-area > .content {
+  min-height: calc(100vh - 78px);
+}
+@media (max-width: 800px) {
+  .sidebar {
+    position: fixed;
+    width: 250px;
+    transform: translateX(-100%);
+  }
+  .main-area {
+    margin-left: 0;
+  }
+  .main-area > .content {
+    min-height: 100vh;
+  }
+}
