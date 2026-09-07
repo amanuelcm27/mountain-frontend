@@ -7,6 +7,7 @@ import { z } from "zod";
 import { Eye, EyeOff, LockKeyhole, Mail, Mountain } from "lucide-react";
 import { toast } from "sonner";
 import { useAuth } from "@/providers/auth-provider";
+import "./login.css";
 
 const schema = z.object({ email: z.string().email("Enter a valid email"), password: z.string().min(6, "Use at least 6 characters") });
 type Values = z.infer<typeof schema>;
